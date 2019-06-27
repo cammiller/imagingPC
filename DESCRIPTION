@@ -1,0 +1,36 @@
+Package: imagingPC
+Type: Package
+Title: Analysis of Imaging Mass Spectrometry Data using a Process Convolution Approach
+Version: 0.1.0
+Author: Cameron Miller
+Maintainer: Cameron Miller <millercs@musc.edu>
+Description: Analysis of imaging data collected on a regular grid using a process 
+    convolution (PC) approach.  In the discrete PC approach we employ, a zero-centered 
+    latent process is convolved with a smoothing kernel function in order to account for 
+    spatial information.  For computational efficiency with large imaging datasets, this 
+    package implements a semivariogram-based approach to estimate and fix the smoothing 
+    kernel function.  In the context of a Bayesian mixed models framework, this package 
+    writes and fits models to estimate the latent process at a limited set of locations 
+    called support sites while also incorporating covariates of interest.  Furthermore, 
+    this package incorporates the PC approach into left-censored models and marginalized 
+    two-part models to account for different zero-generating processes.  This package was 
+    designed for imaging mass spectrometry (IMS) data, but the methods can be extended to 
+    imaging data collected over a regular grid.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    geoR (>= 1.7.5.2.1),
+    nimble (>= 0.6.12),
+    plyr (>= 1.8.4),
+    coda (>= 0.19.1),
+    ggplot2 (>= 3.0.0),
+    gridExtra (>= 2.3),
+    grid (>= 3.5.0),
+    cowplot (>= 0.9.4)
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
